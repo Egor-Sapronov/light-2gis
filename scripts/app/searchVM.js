@@ -12,7 +12,7 @@ function searchVM() {
             success: function (items) {
 
             },
-            error: function () {
+            error: function (request, status, error) {
                 alert('По запросу ничего не найдено');
             }
         });
