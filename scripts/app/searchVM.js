@@ -21,6 +21,7 @@ function searchVM() {
                         self.companies.push(company);
 
                         DG.marker([item.lon, item.lat]).addTo(map);
+                        DG.then();
                     })
                 }
             }
