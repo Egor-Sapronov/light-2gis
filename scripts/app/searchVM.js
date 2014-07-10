@@ -12,6 +12,17 @@ function searchVM() {
             success: function (items) {
                 if (items.total == 0)
                     alert('По данному запросу ничего не найдено');
+                else {
+                    items.result.forEach(function (item) {
+                        var company = {
+                            name: item.name,
+                            address: item.address
+                        };
+                        self.companies.push(company);
+
+                        DG.marker([item.lon, item.lat]).addTo(map);
+                    })
+                }
             }
         });
     };
