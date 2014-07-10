@@ -17,7 +17,7 @@ function searchVM() {
                     map.remove();
                     map = DG.map('map', {
                         "center": [54.98, 82.89],
-                        "zoom": 13
+                        "zoom": 12
                     });
 
                     self.companies.removeAll();
