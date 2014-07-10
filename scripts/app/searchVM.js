@@ -13,11 +13,13 @@ function searchVM() {
                 if (items.total == 0)
                     alert('По данному запросу ничего не найдено');
                 else {
+                    // Delete map and create new to clear markers
                     map.remove();
                     map = DG.map('map', {
                         "center": [54.98, 82.89],
                         "zoom": 13
                     });
+
                     self.companies.removeAll();
                     items.result.forEach(function (item) {
                         var company = {
