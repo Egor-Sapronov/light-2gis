@@ -13,6 +13,7 @@ function searchVM() {
                 if (items.total == 0)
                     alert('По данному запросу ничего не найдено');
                 else {
+                    self.companies.removeAll();
                     items.result.forEach(function (item) {
                         var company = {
                             name: item.name,

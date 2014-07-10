@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
 
     <title>2gis light</title>
     <link href="content/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,13 @@
                 </span>
             </div>
 
+            <div data-bind="foreach: companies">
+                <div>
+                    <h3 data-bind="text: name"></h3>
+                    <small data-bind="text: address"></small>
+                </div>
+                <hr>
+            </div>
         </div>
     </div>
 </div>
