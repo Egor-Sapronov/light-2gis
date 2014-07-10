@@ -13,6 +13,11 @@ function searchVM() {
                 if (items.total == 0)
                     alert('По данному запросу ничего не найдено');
                 else {
+                    map.remove();
+                    map = DG.map('map', {
+                        "center": [54.98, 82.89],
+                        "zoom": 13
+                    });
                     self.companies.removeAll();
                     items.result.forEach(function (item) {
                         var company = {
@@ -20,6 +25,7 @@ function searchVM() {
                             address: item.address
                         };
                         self.companies.push(company);
+
                         DG.marker([item.lat, item.lon]).addTo(map);
                     })
                 }
