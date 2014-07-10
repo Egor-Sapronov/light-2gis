@@ -11,6 +11,9 @@ function searchVM() {
             type: 'GET',
             success: function (items) {
 
+            },
+            error: function () {
+                alert('По запросу ничего не найдено');
             }
         });
     };
