@@ -13,21 +13,14 @@ function searchVM() {
                 if (items.total == 0)
                     alert('По данному запросу ничего не найдено');
                 else {
-                    DG.then(function () {
-                        map = DG.map('map', {
-                            "center": [54.98, 82.89],
-                            "zoom": 13
-                        });
-
-                        items.result.forEach(function (item) {
-                            var company = {
-                                name: item.name,
-                                address: item.address
-                            };
-                            self.companies.push(company);
-                            DG.marker([item.lon, item.lat]).addTo(map);
-                        })
-                    });
+                    items.result.forEach(function (item) {
+                        var company = {
+                            name: item.name,
+                            address: item.address
+                        };
+                        self.companies.push(company);
+                        DG.marker([item.lat, item.lon]).addTo(map);
+                    })
                 }
             }
         });
